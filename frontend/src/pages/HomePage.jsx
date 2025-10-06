@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import Category from "@/components/Category";
-import ChefList from "@/components/chefList";
+import ChefList from "@/components/ChefList";
 import CustomerReview from "@/components/CustomerReview";
 import FoodMenu from "@/components/FoodMenu";
 import Hero from "@/components/Hero";
