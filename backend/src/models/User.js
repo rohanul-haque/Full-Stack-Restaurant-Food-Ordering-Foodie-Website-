@@ -19,11 +19,20 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    wishlist: {
+      type: Array,
+      default: [],
+    },
     cartData: {
       type: Object,
       default: {},
     },
+    otp: {
+      type: Number,
+      default: null,
+    },
   },
+
   {
     minimize: false,
   }

@@ -2,6 +2,7 @@ import { assets, nav_links } from "@/assets/assets";
 import { AppContext } from "@/contexts/AppContext";
 import { CartContext } from "@/contexts/CartContext";
 import { WishListContext } from "@/contexts/WishListContext";
+import { Avatar } from "@radix-ui/react-avatar";
 import {
   ChevronDown,
   Heart,
@@ -9,12 +10,12 @@ import {
   Menu,
   ShoppingBasket,
   ShoppingCart,
-  User,
   X,
 } from "lucide-react";
 import { useContext, useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -88,12 +89,12 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center gap-10">
           {nav_links.map((link) => (
             <li key={link.id}>
-              <Link
-                to={link.path}
+              <a
+                href={link.id}
                 className="text-gray-700 hover:text-orange-500 transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -129,11 +130,12 @@ const Navbar = () => {
                 className="flex items-center gap-1"
                 onClick={() => setDropdownOpen((prev) => !prev)}
               >
-                <img
-                  className="w-10 h-10 rounded-full object-cover"
-                  src={userData.image}
-                  alt="User Avatar"
-                />
+                <Avatar>
+                  <AvatarImage
+                    className={"w-10 h-10 rounded-full"}
+                    src={userData.image}
+                  />
+                </Avatar>
                 <ChevronDown
                   size={18}
                   className={`transition-transform ${
@@ -145,13 +147,6 @@ const Navbar = () => {
               {/* Desktop Dropdown */}
               {dropdownOpen && (
                 <div className="absolute right-0 mt-6 w-44 bg-white border rounded-lg shadow-lg z-50 overflow-hidden">
-                  <Link
-                    to="/profile"
-                    className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100"
-                    onClick={() => setDropdownOpen(false)}
-                  >
-                    <User size={16} /> Profile
-                  </Link>
                   <Link
                     to="/my-orders"
                     className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100"
@@ -292,16 +287,6 @@ const Navbar = () => {
 
               {mobileDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-full bg-white border rounded-lg shadow-lg z-50 overflow-hidden">
-                  <Link
-                    to="/profile"
-                    className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100"
-                    onClick={() => {
-                      setMobileDropdownOpen(false);
-                      setMobileMenuOpen(false);
-                    }}
-                  >
-                    <User size={16} /> Profile
-                  </Link>
                   <Link
                     to="/my-orders"
                     className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100"

@@ -1,7 +1,6 @@
 import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
@@ -36,16 +35,14 @@ const MainLayout = () => {
         <Navbar />
         <Outlet />
       </main>
-      <Footer />
+
       {showArrow && (
         <button
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 p-2.5 bg-orange-400 text-white rounded-md shadow-lg hover:bg-orange-500 transition"
           title="Scroll to top"
         >
-          <Link to={"/"}>
-            <ChevronUp size={24} />
-          </Link>
+          <ChevronUp size={24} />
         </button>
       )}
     </>

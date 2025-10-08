@@ -104,7 +104,7 @@ const CartPage = () => {
           <Button
             onClick={() => navigate("/place-order")}
             variant="destructive"
-            disabled={subtotal === 0} // now works correctly
+            disabled={subtotal === 0}
             className="w-full"
           >
             Proceed to Checkout

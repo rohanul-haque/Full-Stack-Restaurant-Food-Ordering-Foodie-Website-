@@ -60,13 +60,11 @@ const HomePage = () => {
 
   return (
     <section className="flex flex-col lg:flex-row min-h-screen">
-      {/* Sidebar */}
       <div className="hidden lg:block lg:w-1/6 border-r bg-white">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 lg:pl-4 pt-4">
+      <div className="flex-1 lg:pl-4 pt-4 pb-5">
         {loading && <Loader />}
         {!loading && error && (
           <p className="text-red-600 text-center my-6">{error}</p>

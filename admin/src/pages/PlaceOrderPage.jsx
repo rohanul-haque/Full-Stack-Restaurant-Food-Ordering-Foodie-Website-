@@ -54,13 +54,11 @@ const PlaceOrderPage = () => {
 
   return (
     <section className="flex flex-col lg:flex-row min-h-screen">
-      {/* Sidebar */}
       <div className="hidden lg:block lg:w-1/6 border-r bg-white">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 lg:pl-4 pt-4">
+      <div className="flex-1 lg:pl-4 pt-4 pb-6">
         {loading ? (
           <Loader />
         ) : orderList.length === 0 ? (
@@ -72,14 +70,12 @@ const PlaceOrderPage = () => {
                 key={order._id}
                 className="grid grid-cols-1 md:grid-cols-[50px_2fr_100px_100px_180px] gap-3 p-4 border border-gray-300 rounded"
               >
-                {/* Image */}
                 <img
                   className="w-14 h-14 object-contain"
                   src={assets.parcel_icon}
                   alt="parcel"
                 />
 
-                {/* Address & Items */}
                 <div className="space-y-1">
                   <p className="font-medium text-gray-800">
                     {order.items.map((item, index) => (
@@ -107,13 +103,10 @@ const PlaceOrderPage = () => {
                   </p>
                 </div>
 
-                {/* Amount */}
                 <p className="font-semibold text-gray-700">${order.amount}</p>
 
-                {/* Total Items */}
                 <p className="text-gray-700">Items: {order.items.length}</p>
 
-                {/* Status Selector */}
                 <div className="w-full md:w-[180px]">
                   <Select
                     defaultValue={order.status}

@@ -4,7 +4,7 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import FoodCard from "./FoodCard";
 import SectionTitle from "./SectionTitle";
 import { Button } from "./ui/button";
-import { Skeleton } from "./ui/skeleton"; // ✅ shadcn skeleton
+import { Skeleton } from "./ui/skeleton";
 
 const FoodMenu = () => {
   const [selectedMenu, setSelectedMenu] = useState("All");
@@ -13,13 +13,15 @@ const FoodMenu = () => {
 
   const { foodList = [], error, loading } = useContext(CartContext);
 
-  // ✅ useMemo with correct dependencies
   const filteredFood = useMemo(() => {
-    return foodList?.filter(
-      (food) =>
-        selectedMenu === "All" ||
-        food.category.toLowerCase() === selectedMenu.toLowerCase()
-    );
+    return foodList
+      ?.slice()
+      .reverse()
+      .filter(
+        (food) =>
+          selectedMenu === "All" ||
+          food.category.toLowerCase() === selectedMenu.toLowerCase()
+      );
   }, [selectedMenu, foodList]);
 
   const totalPages = Math.ceil(filteredFood?.length / itemsPerPage);
@@ -29,7 +31,6 @@ const FoodMenu = () => {
     currentPage * itemsPerPage
   );
 
-  // ✅ Prevent out-of-range page when category changes
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(totalPages || 1);
@@ -87,7 +88,10 @@ const FoodMenu = () => {
         </p>
       ) : (
         <>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div
+            id="foods"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"
+          >
             {paginatedFood?.map((food) => (
               <FoodCard key={food._id} food={food} />
             ))}

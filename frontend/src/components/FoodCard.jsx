@@ -24,7 +24,6 @@ const FoodCard = ({ food }) => {
     setModalOpen(true);
   };
 
- 
   const handleAddToCart = () => {
     if (selectedFood) addToCart(selectedFood._id);
   };

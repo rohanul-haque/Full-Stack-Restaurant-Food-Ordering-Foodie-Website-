@@ -62,15 +62,12 @@ const AddFood = () => {
 
   return (
     <section className="flex min-h-screen">
-      {/* Sidebar */}
       <div className="hidden lg:block lg:w-1/6 border-r bg-white">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 pt-3 lg:mt-1 lg:pl-3 lg:p-4">
         <form onSubmit={addFoodHandler} className="max-w-2xl space-y-6">
-          {/* Image Upload */}
           <div className="grid gap-2">
             <Label htmlFor="image">Image</Label>
             <Input
@@ -81,7 +78,6 @@ const AddFood = () => {
             />
           </div>
 
-          {/* Name */}
           <div className="grid gap-2">
             <Label htmlFor="name">Name</Label>
             <Input
@@ -92,7 +88,6 @@ const AddFood = () => {
             />
           </div>
 
-          {/* Description */}
           <div className="grid gap-2">
             <Label htmlFor="description">Description</Label>
             <Textarea
@@ -104,7 +99,6 @@ const AddFood = () => {
             />
           </div>
 
-          {/* Category & Price */}
           <div className="grid gap-6 md:grid-cols-2">
             <div className="grid gap-2">
               <Label>Product Category</Label>

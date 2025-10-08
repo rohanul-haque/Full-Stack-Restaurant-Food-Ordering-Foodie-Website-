@@ -54,13 +54,11 @@ const FoodListPage = () => {
 
   return (
     <section className="flex flex-col lg:flex-row min-h-screen">
-      {/* Sidebar */}
       <div className="hidden lg:block lg:w-1/6 border-r bg-white">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 lg:pl-4 pt-4">
+      <div className="flex-1 lg:pl-4 pt-4 pb-5">
         {loading ? (
           <Loader />
         ) : foodList && foodList.length > 0 ? (
