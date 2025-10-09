@@ -303,3 +303,187 @@ To run this project, add the following environment variables to your `.env` file
 `SMTP_USER`=""
 
 `SMTP_PASSWORD`=""
+
+## 🚀 Run Locally
+
+### Clone the project
+
+```bash
+  git clone https://github.com/rohanul-haque/Full-Stack-Restaurant-Food-Ordering-Website.git
+```
+
+---
+
+### 🖥️ Frontend
+
+Go to the project **_Frontend_** directory:
+
+```bash
+  cd frontend
+```
+
+Install dependencies:
+
+```bash
+  npm install
+```
+
+Start the development server:
+
+```bash
+  npm run dev
+```
+
+---
+
+### 🧑‍💻 Admin
+
+Go to the project **_Admin_** directory:
+
+```bash
+cd admin
+
+```
+
+Install dependencies:
+
+```bash
+  npm install
+```
+
+Start the development server:
+
+```bash
+  npm run dev
+```
+
+---
+
+### 🛠️ Backend
+
+Go to the project **_Backend_** directory:
+
+```bash
+  cd backend
+```
+
+Install dependencies:
+
+```bash
+  npm install
+```
+
+Start the development server:
+
+```bash
+  npm run dev
+```
+
+## 📚 API Documentation
+
+### Base_URL
+
+```
+http://localhost:3000
+```
+
+### Core Endpoints
+
+### 1️⃣ Registered Routes in `server.js`
+
+In `server.js`, the routes are registered as follows:
+
+```js
+app.use("/food", foodRoute);
+app.use("/user", userRoute);
+app.use("/cart", cartRoute);
+app.use("/wishlist", wishListRoute);
+app.use("/order", orderRoute);
+app.use("/dashboard", dashboardRoute);
+app.use("/admin", adminRoute);
+```
+
+### 🔐 User Authentication API
+
+These endpoints handle user registration, login, password reset, and authentication.
+
+| Method | Endpoint          | Description                    | Request Body / Headers       |
+| ------ | ----------------- | ------------------------------ | ---------------------------- |
+| POST   | `/register`       | Register a new user            | `{ name, email, password }`  |
+| POST   | `/login`          | Login user                     | `{ email, password }`        |
+| GET    | `/data`           | Get authenticated user data    | `Headers: { token: <JWT> }`  |
+| POST   | `/reset-otp`      | Request OTP for password reset | `{ email}`                   |
+| POST   | `/verify-otp`     | Verify OTP                     | `{ email, otp}`              |
+| POST   | `/hange-password` | Change user password           | `{ email, otp, newPassword}` |
+
+### 🔐 Admin Authentication API
+
+These endpoints handle **Admin registration, login, password management, and authentication**.  
+All JWT-protected endpoints require the token to be sent in headers as `req.headers.token`.
+
+| Method | Endpoint    | Description                  | Request Body / Headers      |
+| ------ | ----------- | ---------------------------- | --------------------------- |
+| POST   | `/register` | Register a new admin         | `{ name, email, password }` |
+| POST   | `/login`    | Admin login                  | `{ email, password }`       |
+| GET    | `/data`     | Get authenticated admin data | `Headers: { token: <JWT> }` |
+
+### 🍔🍕🍲 Food Management API
+
+These endpoints manage food items in the system.
+
+- **Admin** can add and delete food items (JWT required).
+- **Public** can view the food list without authentication.
+
+| Method | Endpoint | Description              | Request Body / Headers                                        |
+| ------ | -------- | ------------------------ | ------------------------------------------------------------- |
+| POST   | `/add`   | Add a new food item      | `{ name, description, price, category }` (Admin JWT required) |
+| GET    | `/list`  | Get all food items       | No authentication required                                    |
+| DELETE | `/:id`   | Delete a food item by ID | `Headers: { token: <JWT> }` (Admin JWT required)              |
+|        |
+
+### 🛒 Add to Cart API
+
+These endpoints allow **authenticated users** to manage their cart.  
+All endpoints require **user login** and JWT token in headers (`req.headers.token`).
+
+| Method | Endpoint          | Description                  | Request Body / Headers      |
+| ------ | ----------------- | ---------------------------- | --------------------------- |
+| POST   | `/add/:itemId`    | Add a food item to the cart  | `Headers: { token: <JWT> }` |
+| DELETE | `/remove/:itemId` | Remove a food item from cart | `Headers: { token: <JWT> }` |
+| GET    | `/list`           | Get all items in the cart    | `Headers: { token: <JWT> }` |
+
+### 💖 Add to Wish List API
+
+These endpoints allow **authenticated users** to manage their wishlist.  
+All endpoints require **user login** and JWT token in headers (`req.headers.token`).
+
+| Method | Endpoint             | Description                             | Request Body / Headers      |
+| ------ | -------------------- | --------------------------------------- | --------------------------- |
+| POST   | `/toggle/:productId` | Add or remove a food item from wishlist | `Headers: { token: <JWT> }` |
+| GET    | `/list`              | Get all items in the user's wishlist    | `Headers: { token: <JWT> }` |
+
+### 📝 Order API
+
+These endpoints allow **authenticated users** to place and verify orders,  
+and **admins** to change order status.  
+All endpoints require **JWT token** in headers (`req.headers.token`).
+
+| Method | Endpoint         | Description                                                                  | Request Body / Headers                                                          |
+| ------ | ---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| POST   | `/place`         | Place a new order                                                            | `body: { items, amount, address }`, `Headers: { token: <JWT> }`                 |
+| POST   | `verify`         | Verify order payment status                                                  | `body: { orderId, status: "success" or "cancel" }`, `Headers: { token: <JWT> }` |
+| GET    | `/list`          | Get all orders (users see own orders; admins see all orders)                 | `Headers: { token: <JWT> }`                                                     |
+| PUT    | `/status-change` | Change order status (processing, out for delivery, delivered) **Admin only** | `body: { orderId, status }`, `Headers: { token: <JWT> }`                        |
+
+### 📊 Admin Dashboard API
+
+These endpoints allow **admins** to retrieve comprehensive dashboard data,  
+including orders, food items, and user statistics.  
+All endpoints require **Admin login** and JWT token in headers (`req.headers.token`).
+
+| Method | Endpoint | Description                             | Request Body / Headers      |
+| ------ | -------- | --------------------------------------- | --------------------------- |
+| GET    | `/data`  | Retrieve dashboard analytics including: | `Headers: { token: <JWT> }` |
+|        |          | • Orders chart with **amount and date** |                             |
+|        |          | • Recently added food items             |                             |
+|        |          | • Recent user orders Profile            |                             |
