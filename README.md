@@ -10,9 +10,9 @@
 
 ## 🌐 Live Demo
 
-- **Frontend:** [Vercel Deployment Link](#)
-- **Admin:** [Vercel Deployment Link](#)
-- **Backend:** [Vercel Deployment Link](#)
+- **Frontend:** [Vercel Deployment Link](https://full-stack-restaurant-food-ordering.vercel.app)
+- **Admin:** [Vercel Deployment Link](https://foodie-dashboard.vercel.app)
+- **Backend:** [Vercel Deployment Link](https://foodie-backend-ashy.vercel.app)
 
 ---
 
@@ -105,7 +105,6 @@
 ├── 📁 admin/
 │   ├── 📁 node_modules/ 🚫 (auto-hidden)
 │   ├── 📁 public/
-│   │   └── 🖼️ vite.svg
 │   ├── 📁 src/
 │   │   ├── 📁 assets/
 │   │   ├── 📁 components/
@@ -192,7 +191,6 @@
 ├── 📁 frontend/
 │   ├── 📁 node_modules/ 🚫 (auto-hidden)
 │   ├── 📁 public/
-│   │   └── 🖼️ vite.svg
 │   ├── 📁 src/
 │   │   ├── 📁 assets/
 │   │   ├── 📁 components/
