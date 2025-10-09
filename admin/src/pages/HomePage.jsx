@@ -29,7 +29,11 @@ const HomePage = () => {
     setLoading(true);
     setError("");
     try {
-      const { data } = await axios.get(`${backendUrl}/dashboard/data`);
+      const { data } = await axios.get(`${backendUrl}/dashboard/data`, {
+        headers: {
+          token: localStorage.getItem("adminToken"),
+        },
+      });
 
       if (data.success) {
         const formattedOrders = (data.orderList || [])

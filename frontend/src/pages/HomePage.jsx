@@ -8,7 +8,7 @@ import NewsLatter from "@/components/NewsLatter";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Hero />
       <Category />
       <About />
@@ -16,7 +16,7 @@ const HomePage = () => {
       <ChefList />
       <CustomerReview />
       <NewsLatter />
-    </>
+    </div>
   );
 };
 

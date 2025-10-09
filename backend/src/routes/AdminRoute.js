@@ -1,8 +1,8 @@
 import express from "express";
 import {
-    AdminLogin,
-    getAdminData,
-    registerAdmin,
+  AdminLogin,
+  getAdminData,
+  registerAdmin,
 } from "../controllers/adminController.js";
 import authProtected from "../middlewares/authProtected.js";
 import imageUploader from "../utils/imageUploader.js";

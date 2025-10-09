@@ -37,7 +37,11 @@ const FoodListPage = () => {
 
   const deleteFood = async (id) => {
     try {
-      const { data } = await axios.delete(`${backendUrl}/food/${id}`);
+      const { data } = await axios.delete(`${backendUrl}/food/${id}`, {
+        headers: {
+          token: localStorage.getItem("adminToken"),
+        },
+      });
 
       if (data.success) {
         toast.success(data.message);

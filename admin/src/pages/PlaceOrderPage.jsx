@@ -22,7 +22,11 @@ const PlaceOrderPage = () => {
   const fetchOrdersList = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get(`${backendUrl}/order/list`);
+      const { data } = await axios.get(`${backendUrl}/order/list`, {
+        headers: {
+          token: localStorage.getItem("adminToken"),
+        },
+      });
       if (data.success) setOrderList(data.orderList);
       else setOrderList([]);
     } catch (error) {
@@ -38,17 +42,25 @@ const PlaceOrderPage = () => {
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      const { data } = await axios.put(`${backendUrl}/order/status-change`, {
-        orderId,
-        status: newStatus,
-      });
+      const { data } = await axios.put(
+        `${backendUrl}/order/status-change`,
+        {
+          orderId,
+          status: newStatus,
+        },
+        {
+          headers: {
+            token: localStorage.getItem("adminToken"),
+          },
+        }
+      );
 
       if (data.success) {
         toast.success(data.message);
         fetchOrdersList();
       }
     } catch (error) {
-      console.error("Error updating status:", error);
+      toast.error("Status update failed");
     }
   };
 

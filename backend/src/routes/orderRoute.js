@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/place", authProtected, placeOrder);
 router.post("/verify", authProtected, verifyOrder);
 router.get("/user-order-list", authProtected, userOrder);
-router.get("/list", orderList);
-router.put("/status-change", orderStatusChange);
+router.get("/list", authProtected, orderList);
+router.put("/status-change", authProtected, orderStatusChange);
 
 export default router;

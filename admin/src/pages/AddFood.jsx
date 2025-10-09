@@ -43,7 +43,11 @@ const AddFood = () => {
       formData.append("price", price);
       formData.append("category", category);
 
-      const { data } = await axios.post(`${backendUrl}/food/add`, formData);
+      const { data } = await axios.post(`${backendUrl}/food/add`, formData, {
+        headers: {
+          token: localStorage.getItem("adminToken"),
+        },
+      });
 
       if (data.success) {
         toast.success(data.message);

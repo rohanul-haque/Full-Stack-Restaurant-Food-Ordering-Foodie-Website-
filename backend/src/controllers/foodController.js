@@ -65,6 +65,8 @@ export const foodList = async (req, res) => {
 export const deleteFood = async (req, res) => {
   const { id } = req.params;
 
+  console.log(id)
+
   if (!id)
     return res.status(400).json({ success: false, message: "ID is required" });
 
@@ -83,6 +85,7 @@ export const deleteFood = async (req, res) => {
       food: deletedFood,
     });
   } catch (error) {
+    console.log(error)
     return res.status(500).json({
       success: false,
       message: "Failed to delete food",

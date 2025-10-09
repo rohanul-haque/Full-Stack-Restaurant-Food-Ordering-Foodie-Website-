@@ -164,7 +164,7 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Button variant="destructive" onClick={() => navigate("/signup")}>
+            <Button kvariant="destructive" onClick={() => navigate("/signup")}>
               Create Account
             </Button>
           )}
@@ -173,7 +173,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="flex lg:hidden items-center gap-2">
           {userDataLoader ? (
-            <div className="animate-spin border-2 border-orange-500 border-t-transparent rounded-full w-8 h-8"></div>
+            <div className="animate-spin border-2 border-orange-500 border-t-transparent rounded-full w-5 h-5"></div>
           ) : (
             userData && (
               <img
@@ -229,13 +229,13 @@ const Navbar = () => {
         >
           {nav_links.map((link) => (
             <li key={link.id}>
-              <Link
-                to={link.path}
+              <a
+                href={link.id}
                 className="block text-gray-700 py-2 px-2 rounded hover:bg-orange-100 transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
