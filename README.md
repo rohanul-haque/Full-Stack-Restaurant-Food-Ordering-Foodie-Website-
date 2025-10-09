@@ -427,7 +427,7 @@ All JWT-protected endpoints require the token to be sent in headers as `req.head
 | POST   | `/login`    | Admin login                  | `{ email, password }`       |
 | GET    | `/data`     | Get authenticated admin data | `Headers: { token: <JWT> }` |
 
-### 🍔🍕🍲 Food Management API
+### 🍔 Food Management API
 
 These endpoints manage food items in the system.
 
@@ -487,3 +487,38 @@ All endpoints require **Admin login** and JWT token in headers (`req.headers.tok
 |        |          | • Orders chart with **amount and date** |                             |
 |        |          | • Recently added food items             |                             |
 |        |          | • Recent user orders Profile            |                             |
+
+## 🛠️ Roadmap / Future Improvements
+
+- Implement **live chat support** for users
+- Add **multi-language support**
+- Enhance **search and filter functionality**
+- Add **user notifications & email alerts**
+- Deploy full system to **production**
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Make your changes and commit (`git commit -m 'Add some feature'`)
+4. Push to branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 📞 Contact / Support
+
+You can reach out for support or collaboration via the following channels:
+
+- **GitHub:** [rohanul-haque](https://github.com/rohanul-haque)
+- **LinkedIn:** [md-rohanul-haque](https://www.linkedin.com/in/md-rohanul-haque)
+- **Facebook:** [md.rohanul.haque.rohan](https://www.facebook.com/md.rohanul.haque.rohan)
+- **Email:** [dev.rohan2024@gmail.com](mailto:dev.rohan2024@gmail.com)
