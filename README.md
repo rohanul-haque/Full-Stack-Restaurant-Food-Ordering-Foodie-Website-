@@ -1,12 +1,10 @@
 # 🍔 Foodie - Full Stack Restaurant Food Ordering Website
 
-**Foodie** is a **modern, fully responsive restaurant delivery website** built with **React, Node.js, Express, MongoDB, and TailwindCSS**.
+**A 🌟 modern, fully responsive 🍽️ restaurant food ordering web application** built with **⚛️ React, 🎨 Tailwind CSS, 🟢 Node.js, ⚡ Express, 🗄️ MongoDB, ✨ Framer Motion, and 🛠️ ShadCN UI**.
 
-Users can **browse the menu**, **add items to Cart/Wishlist**, and **place orders online with Stripe payment** 💳.  
-Temporary data is **stored on the client-side** 🕒 and **synced to the database after login**.  
-**React Toast notifications** 🔔 provide friendly alerts.
+**Foodie** allows users to 🔍 **browse, filter, and search food items**, 🛒 **add items to their cart or ❤️ wishlist**, 📝 **place orders**, and 🚚 **track deliveries**.
 
-**Admins** 👨‍💻 can **manage all orders**, **add/update/delete food items**, **track order status via a dashboard**, and **view order statistics with graphs/charts** 📊.
+👨‍💻 **Admins** can ➕ **add/edit/remove food items**, 📋 **view orders**, and 📊 **track analytics** through an **intuitive dashboard**.
 
 ---
 
@@ -19,98 +17,86 @@ Temporary data is **stored on the client-side** 🕒 and **synced to the databas
 ---
 
 ## 🖼️ Website Screenshot
+
 ![App Screenshot](https://res.cloudinary.com/dntarupgf/image/upload/v1759945030/Foodie_Website_dvythn.png)
 
+---
+
+## 🌟 Features
+
+### 👤 For Users
+
+- 🍽️ **Browse all food items** and filter by category.
+- 🔍 **Search functionality** (planned).
+- 🛒 **Add items to cart and wishlist** (favorite foods) **without logging in**.
+- ✏️ **Edit or remove items** from cart and wishlist.
+- 🔐 **After login, cart and wishlist data syncs** with the database.
+- 📝 **Checkout with delivery details:** name, email, address, phone, etc.
+- 💳 **Stripe integration** for secure online payments (success/cancel options).
+- 🚚 **Track order status:** processing, out for delivery, delivered.
+- 📄 **Pagination and skeleton loaders** for smooth UX.
+- 🖥️ **Responsive modern design** including:
+  - 🏠 Navbar & Hero section
+  - 🗂️ Category & Services, About Us
+  - 🍲 Food Menu & List, Food Cart
+  - 👨‍🍳 Chef list carousel
+  - ⭐ Customer reviews, 📧 Newsletter subscription, Footer
+- 🔔 **Notifications:** All actions like add to cart, wishlist, order success/failure use **React Hot Toast** for instant feedback.
+
+### 🛠️ For Admins
+
+- ➕ **Add**, ✏️ **Edit**, and ❌ **Remove food items**.
+- 📋 **View all orders** with status updates.
+- 📊 **Dashboard with bar charts** showing latest orders and statistics.
+- 🗂️ **Manage all routes** and monitor user activity.
+- 🔔 **Admin notifications:** Updates, new orders, and actions trigger **React Hot Toast** alerts.
 
 ---
 
-## 🌟 Features / ফিচারগুলো
+## 💡 Key Highlights
 
-### 👤 User Features (No Login Required / লগইন ছাড়াই)
-
-- 🍽 Browse food menu with categories and detailed food lists.
-- 🛒 Add items to **Cart** and **Wishlist**.
-- ❌ Remove items from **Cart/Wishlist**.
-- 🕒 Temporary cart and wishlist storage before login.
-- 💳 Place orders with **delivery information** and **Stripe payment**.
-- 📱 Fully **responsive design** for all devices.
-- 🖼 Custom **Hero Section, Categories, About, Food Menu, Food List, Saved Cards, Customer Reviews, Newsletter**.
-- 🔢 Pagination for smooth food browsing.
-- 🔔 **React Toast notifications** for success/error messages.
-
-### 🔐 Authentication & Account / অথেন্টিকেশন & অ্যাকাউন্ট
-
-- 📝 **Sign Up / Login** system with **JWT authentication**.
-- 🔑 **Reset Password / Change Password** functionality.
-- 🛡 Secure authentication using **bcrypt, helmet, rate limiter, CORS, HPP**.
-- 📧 Email notifications using **Nodemailer**.
-- 🗄 Temporary cart/wishlist data is **saved to database** once the user logs in.
-
-### 🛠 Admin Features / অ্যাডমিন ফিচার
-
-- 📊 View all **Orders** with **charts & analytics**.
-- ➕ Add new food items easily.
-- 🗑 Delete or update existing food items.
-- 🔄 Track and change **order status**.
-- 🗂 Manage projected routes and pagination for orders and menu items.
+- ✨ **Modern UI** with responsive Tailwind CSS and Framer Motion animations.
+- 🗄️ **Full-stack integration** with MongoDB database.
+- 📊 **Admin dashboard** with analytics and order tracking.
+- 💳 **Secure Stripe payments integration**.
+- 🔔 **Real-time notifications** with **React Hot Toast** for all important user and admin actions.
 
 ---
 
-## ⚙️ Tech Stack
+## 🖥️ Full Tech Stack
 
 ### 🧩 Frontend Technologies
 
-| Technology                     | Purpose & Description                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------- |
-| **React (Vite)**               | ⚡ Modern, fast, and lightweight frontend framework for building responsive UIs.            |
-| **Tailwind CSS**               | 🎨 Utility-first CSS framework to rapidly style components without writing custom CSS.      |
-| **React Router DOM**           | 🌐 Enables smooth client-side routing for single-page applications.                         |
-| **Axios**                      | 📡 Handles HTTP requests to interact with backend APIs efficiently.                         |
-| **Context API**                | 🧠 Simplified state management without needing external libraries like Redux or Zustand.    |
-| **React Hot Toast**            | 🔔 Provides elegant, customizable notifications and alerts.                                 |
-| **Lucide React & React Icons** | 🖼️ Clean and versatile icon libraries for React applications.                               |
-| **Framer Motion**              | ✨ Adds smooth, interactive animations and transitions to UI elements.                      |
-| **ShadCN UI**                  | 🏗️ Component library with ready-to-use, accessible, and beautifully designed UI components. |
+| Technology                        | Purpose & Description                                                                    |
+| --------------------------------- | ---------------------------------------------------------------------------------------- |
+| ⚛️ **React (Vite)**               | Modern, fast, and lightweight frontend framework for building responsive UIs.            |
+| 🎨 **Tailwind CSS**               | Utility-first CSS framework to rapidly style components without writing custom CSS.      |
+| 🌐 **React Router DOM**           | Enables smooth client-side routing for single-page applications.                         |
+| 📡 **Axios**                      | Handles HTTP requests to interact with backend APIs efficiently.                         |
+| 🧠 **Context API**                | Simplified state management without external libraries like Redux or Zustand.            |
+| 🔔 **React Hot Toast**            | Provides elegant, customizable notifications and alerts.                                 |
+| 🖼️ **Lucide React & React Icons** | Clean and versatile icon libraries for React applications.                               |
+| ✨ **Framer Motion**              | Adds smooth, interactive animations and transitions to UI elements.                      |
+| 🏗️ **ShadCN UI**                  | Component library with ready-to-use, accessible, and beautifully designed UI components. |
 
 ### 🛠️ Backend Technologies
 
-| Technology / Package               | Purpose & Description                                                                   |
-| ---------------------------------- | --------------------------------------------------------------------------------------- |
-| **Node.js**                        | ⚡ JavaScript runtime environment for building fast and scalable backend applications.  |
-| **Express.js**                     | 🛠️ Minimal and flexible backend framework for creating APIs and server-side logic.      |
-| **MongoDB + Mongoose**             | 🗄️ NoSQL database & ODM for schema-based data modeling and easy database interactions.  |
-| **JWT (JSON Web Token)**           | 🔐 Token-based authentication for secure user sessions.                                 |
-| **bcrypt**                         | 🔑 Password hashing for secure authentication.                                          |
-| **Dotenv**                         | 🌱 Loads environment variables from `.env` files.                                       |
-| **Multer.js**                      | 📤 Handles file uploads (images, documents, etc.).                                      |
-| **Nodemailer**                     | ✉️ Sending emails programmatically from Node.js.                                        |
-| **Cloudinary**                     | ☁️ Cloud-based media storage and management (image/video hosting).                      |
-| **Express Rate Limiter**           | 🛡️ Protects APIs from brute-force attacks by limiting requests.                         |
-| **Helmet**                         | 🛡️ Adds security headers to protect Express apps.                                       |
-| **HPP (HTTP Parameter Pollution)** | 🔒 Prevents HTTP parameter pollution attacks.                                           |
-| **Stripe**                         | 💳 Payment processing for online transactions.                                          |
-| **Nodemon**                        | 🔄 Automatically restarts the server during development when file changes are detected. |
-
----
-
-## 🚀 Key Points / মূল বিষয়গুলো
-
-- ✅ Fully responsive, modern UI.
-- ✅ Guest users can add to cart/wishlist without login.
-- ✅ Data temporarily stored in client; synced to database after login.
-- ✅ Smooth checkout with **Stripe payment**.
-- ✅ Admin dashboard with order tracking, charts & CRUD for foods.
-- ✅ Toast notifications for real-time feedback.
-
----
-
-## 💻 Installation / ইনস্টলেশন ও রান করার ধাপ
-
-1. Clone the repository / রেপোজিটরি ক্লোন করুন:
-
-```bash
-git clone https://github.com/yourusername/foodie.git
-```
+| Technology / Package        | Purpose & Description                                                           |
+| --------------------------- | ------------------------------------------------------------------------------- |
+| ⚡ **Node.js**              | JavaScript runtime for building fast and scalable backend applications.         |
+| 🛠️ **Express.js**           | Minimal and flexible backend framework for creating APIs and server-side logic. |
+| 🗄️ **MongoDB + Mongoose**   | NoSQL database & ODM for schema-based data modeling.                            |
+| 🔐 **JWT (JSON Web Token)** | Token-based authentication for secure user sessions.                            |
+| 🔑 **bcrypt**               | Password hashing for secure authentication.                                     |
+| 🌱 **Dotenv**               | Loads environment variables from `.env` files.                                  |
+| 📤 **Multer.js**            | Handles file uploads (images, documents, etc.).                                 |
+| ✉️ **Nodemailer**           | Sending emails programmatically from Node.js.                                   |
+| ☁️ **Cloudinary**           | Cloud-based media storage and management.                                       |
+| 🛡️ **Express Rate Limiter** | Protects APIs from brute-force attacks by limiting requests.                    |
+| 🛡️ **Helmet**               | Adds security headers to protect Express apps.                                  |
+| 🔒 **HPP**                  | Prevents HTTP parameter pollution attacks.                                      |
+| 💳 **Stripe**               | Payment processing for online transactions.                                     |
+| 🔄 **Nodemon**              | Automatically restarts the server during development on file changes.           |
 
 ## 📁 Project Structure
 
@@ -267,3 +253,53 @@ git clone https://github.com/yourusername/foodie.git
 ├── 🚫 .gitignore
 └── 📖 README.md
 ```
+
+## 🌐 Environment Variables
+
+To run this project, add the following environment variables to your `.env` files:
+
+---
+
+### 🖥️ Frontend `.env`
+
+`VITE_BACKEND_URL`="http://localhost:3000"
+
+---
+
+### 🧑‍💻 Admin `.env`
+
+`VITE_BACKEND_URL`="http://localhost:3000"
+
+---
+
+### 🛠️ Backend `.env`
+
+`PORT`="3000"
+
+`DATABASE_CONNECTION_STRING`=""
+
+`JWT_SECRET`=""
+
+`FRONTEND_URL`="http://localhost:5173"
+
+#### Cloudinary
+
+`CLOUDINARY_CLOUD_NAME`=""
+
+`CLOUDINARY_API_KEY`=""
+
+`CLOUDINARY_API_SECRET`=""
+
+#### Stripe
+
+`STRIPE_SECRET_KEY`=""
+
+#### SMTP / Email
+
+`SMTP_HOST`=""
+
+`SMTP_PORT`=""
+
+`SMTP_USER`=""
+
+`SMTP_PASSWORD`=""
