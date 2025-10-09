@@ -19,8 +19,8 @@ Temporary data is **stored on the client-side** 🕒 and **synced to the databas
 ---
 
 ## 🖼️ Website Screenshot
-
 ![App Screenshot](https://res.cloudinary.com/dntarupgf/image/upload/v1759945030/Foodie_Website_dvythn.png)
+
 
 ---
 
