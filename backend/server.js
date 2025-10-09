@@ -1,4 +1,3 @@
-import compression from "compression";
 import cors from "cors";
 import "dotenv/config";
 import express from "express";
@@ -27,7 +26,6 @@ app.use(helmet());
 app.use(cors());
 app.use(limiter);
 app.use(hpp());
-app.use(compression());
 app.use(express.json());
 
 app.use("/food", foodRoute);

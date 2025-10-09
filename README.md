@@ -56,16 +56,40 @@ Temporary data is **stored on the client-side** 🕒 and **synced to the databas
 
 ---
 
-## 💻 Tech Stack & Tools / টেক স্ট্যাক ও টুলস
+## ⚙️ Tech Stack
 
-**Frontend / ফ্রন্টএন্ড:**  
-React, TailwindCSS, ShadCN UI, React Router DOM, Lucide React, React Icons, React Toast
+### 🧩 Frontend Technologies
 
-**Backend / ব্যাকএন্ড:**  
-Node.js, Express, MongoDB, Mongoose, JWT, Bcrypt, Multer
+| Technology                     | Purpose & Description                                                                       |
+| ------------------------------ | ------------------------------------------------------------------------------------------- |
+| **React (Vite)**               | ⚡ Modern, fast, and lightweight frontend framework for building responsive UIs.            |
+| **Tailwind CSS**               | 🎨 Utility-first CSS framework to rapidly style components without writing custom CSS.      |
+| **React Router DOM**           | 🌐 Enables smooth client-side routing for single-page applications.                         |
+| **Axios**                      | 📡 Handles HTTP requests to interact with backend APIs efficiently.                         |
+| **Context API**                | 🧠 Simplified state management without needing external libraries like Redux or Zustand.    |
+| **React Hot Toast**            | 🔔 Provides elegant, customizable notifications and alerts.                                 |
+| **Lucide React & React Icons** | 🖼️ Clean and versatile icon libraries for React applications.                               |
+| **Framer Motion**              | ✨ Adds smooth, interactive animations and transitions to UI elements.                      |
+| **ShadCN UI**                  | 🏗️ Component library with ready-to-use, accessible, and beautifully designed UI components. |
 
-**Other Tools / অন্যান্য টুলস:**  
-Cloudinary (image upload), Stripe (payments), Dotenv, Cors, Helmet, HPP, Express Rate Limiter, Nodemailer, Nodemon
+### 🛠️ Backend Technologies
+
+| Technology / Package               | Purpose & Description                                                                   |
+| ---------------------------------- | --------------------------------------------------------------------------------------- |
+| **Node.js**                        | ⚡ JavaScript runtime environment for building fast and scalable backend applications.  |
+| **Express.js**                     | 🛠️ Minimal and flexible backend framework for creating APIs and server-side logic.      |
+| **MongoDB + Mongoose**             | 🗄️ NoSQL database & ODM for schema-based data modeling and easy database interactions.  |
+| **JWT (JSON Web Token)**           | 🔐 Token-based authentication for secure user sessions.                                 |
+| **bcrypt**                         | 🔑 Password hashing for secure authentication.                                          |
+| **Dotenv**                         | 🌱 Loads environment variables from `.env` files.                                       |
+| **Multer.js**                      | 📤 Handles file uploads (images, documents, etc.).                                      |
+| **Nodemailer**                     | ✉️ Sending emails programmatically from Node.js.                                        |
+| **Cloudinary**                     | ☁️ Cloud-based media storage and management (image/video hosting).                      |
+| **Express Rate Limiter**           | 🛡️ Protects APIs from brute-force attacks by limiting requests.                         |
+| **Helmet**                         | 🛡️ Adds security headers to protect Express apps.                                       |
+| **HPP (HTTP Parameter Pollution)** | 🔒 Prevents HTTP parameter pollution attacks.                                           |
+| **Stripe**                         | 💳 Payment processing for online transactions.                                          |
+| **Nodemon**                        | 🔄 Automatically restarts the server during development when file changes are detected. |
 
 ---
 
