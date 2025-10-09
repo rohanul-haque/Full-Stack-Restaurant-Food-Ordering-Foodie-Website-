@@ -32,7 +32,7 @@ const MainLayout = () => {
 
   return (
     <>
-      <main className="container mx-auto px-4 lg:px-8">
+      <main className="container mx-auto px-4 lg:px-8 overflow-hidden">
         <Navbar />
         <Outlet />
       </main>

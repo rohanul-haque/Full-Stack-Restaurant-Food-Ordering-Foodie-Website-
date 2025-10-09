@@ -1,5 +1,7 @@
 import { food_menu } from "@/assets/assets";
 import { CartContext } from "@/contexts/CartContext";
+import { SlideUp } from "@/hooks/Animation";
+import { motion } from "framer-motion";
 import { useContext, useEffect, useMemo, useState } from "react";
 import FoodCard from "./FoodCard";
 import SectionTitle from "./SectionTitle";
@@ -88,14 +90,17 @@ const FoodMenu = () => {
         </p>
       ) : (
         <>
-          <div
+          <motion.div
+            variants={SlideUp(0.5)}
+            initial="hidden"
+            whileInView="visible"
             id="foods"
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"
           >
             {paginatedFood?.map((food) => (
               <FoodCard key={food._id} food={food} />
             ))}
-          </div>
+          </motion.div>
 
           {/* Pagination Controls */}
           {totalPages > 1 && (

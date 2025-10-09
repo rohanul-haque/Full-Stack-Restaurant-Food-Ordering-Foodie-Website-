@@ -38,12 +38,14 @@ export const service_data = [
     title: "🍽️ Quality Food",
     description:
       "Fresh, high-quality meals made with care and packed with flavor. 😋",
+    deley: 0.3,
   },
   {
     id: 2,
     image: rocket,
     title: "⚡ Fast Delivery",
     description: "Hot and delicious food delivered quickly to your door. 🚀",
+    deley: 0.6,
   },
   {
     id: 3,
@@ -51,6 +53,7 @@ export const service_data = [
     title: "⭐ Exceptional Service",
     description:
       "Friendly, helpful staff making every order smooth and easy. 😊",
+    deley: 0.9,
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ export const service_data = [
     title: "🧼 Hygiene First",
     description:
       "Strict hygiene practices ensure clean, safe meals every time. 🧽",
+    deley: 0.9,
   },
 ];
 
@@ -65,23 +69,26 @@ export const about_data = [
   {
     id: 1,
     icon: deilevery_icon,
-    title: "Convenient and Reliable",
+    title: "🚚 Convenient and Reliable",
     description:
-      "Whether you dine in, take out, or order delivery, our service is convenient, fast, and reliable, making mealtime hassle-free.",
+      "Whether you dine in, take out, or order delivery, our service is convenient, fast, and reliable — making mealtime hassle-free and enjoyable. ⏰💨",
+    delay: 0.2,
   },
   {
     id: 2,
     icon: varient_icon,
-    title: "Variety of Options",
+    title: "🍽️ Variety of Options",
     description:
-      "From hearty meals to light snacks, we offer a wide range of options to suit every taste and craving.",
+      "From hearty meals to light snacks, we offer a wide range of dishes to suit every taste, craving, and mood. 🥗🍕🍝",
+    delay: 0.35,
   },
   {
     id: 3,
     icon: burger_icon,
-    title: "Eat Burger",
+    title: "🍔 Eat Burger, Stay Happy",
     description:
-      "Our burgers are grilled to perfection, with juicy patties and flavorful toppings that make every bite a delicious experience.",
+      "Our burgers are grilled to perfection with juicy patties, fresh buns, and flavorful toppings — a bite of pure satisfaction! 😋🔥",
+    delay: 0.5,
   },
 ];
 
@@ -726,6 +733,7 @@ export const customer_reviews = [
       "🌟 Absolutely amazing food! Every dish is fresh and flavorful. The chef clearly takes pride in each creation. The ambiance is cozy and welcoming, making it perfect for both casual meals and special occasions. 🍽️💎 Highly recommend the seafood platter!",
     image:
       "https://i.pinimg.com/1200x/c2/4e/27/c24e271f2f992fd7e62e8c1e8d9b3e2f.jpg",
+    delay: 0.2,
   },
   {
     id: 2,
@@ -734,6 +742,7 @@ export const customer_reviews = [
     review: "🍔 Exceeded all expectations! Chef’s specials are incredible. 🙌",
     image:
       "https://i.pinimg.com/736x/8c/6d/db/8c6ddb5fe6600fcc4b183cb2ee228eb7.jpg",
+    delay: 0.3,
   },
   {
     id: 3,
@@ -743,6 +752,7 @@ export const customer_reviews = [
       "🎨 Plates are works of art! Presentation and taste are perfect. The flavors are well-balanced, and the portion sizes are generous. Every visit is a delight, and the dessert menu is not to be missed! 😍🍰",
     image:
       "https://i.pinimg.com/736x/6f/a3/6a/6fa36aa2c367da06b2a4c8ae1cf9ee02.jpg",
+    delay: 0.4,
   },
   {
     id: 4,
@@ -752,6 +762,7 @@ export const customer_reviews = [
       "💡 Staff made me feel welcome. Dishes were tasty and easy to enjoy. 👍",
     image:
       "https://i.pinimg.com/1200x/c2/4e/27/c24e271f2f992fd7e62e8c1e8d9b3e2f.jpg",
+    delay: 0.45,
   },
   {
     id: 5,
@@ -760,6 +771,7 @@ export const customer_reviews = [
     review: "✨ Amazing flavors and fast service. Lovely atmosphere! 🌟",
     image:
       "https://i.pinimg.com/736x/81/d6/b1/81d6b158728f5fc97ca6e0a025fefee0.jpg",
+    delay: 0.5,
   },
   {
     id: 6,
@@ -769,6 +781,7 @@ export const customer_reviews = [
       "⚡ Every dish is cooked to perfection! Fresh ingredients, elegant presentation, and creative combinations that surprise the taste buds. The drinks menu complements the meals perfectly, making it a complete dining experience. 🏃‍♂️🍹",
     image:
       "https://i.pinimg.com/736x/9f/46/74/9f4674ca9c17330ab419c1b2f5951d9a.jpg",
+    delay: 0.55,
   },
   {
     id: 7,
@@ -777,6 +790,7 @@ export const customer_reviews = [
     review: "❤️ Diverse menu, tasty food, and perfect ambiance. 🌈",
     image:
       "https://i.pinimg.com/736x/57/3c/80/573c80967c9429d0ed0ce32701f85b70.jpg",
+    delay: 0.6,
   },
   {
     id: 8,
@@ -786,6 +800,7 @@ export const customer_reviews = [
       "👍 Excellent service and delicious dishes from starters to desserts. 🚀",
     image:
       "https://i.pinimg.com/736x/b0/c4/21/b0c421e77cf563962026ade82c90dd5b.jpg",
+    delay: 0.65,
   },
   {
     id: 9,
@@ -794,6 +809,7 @@ export const customer_reviews = [
     review: "💎 A must-visit! Unique flavors and stunning presentation. 🧩",
     image:
       "https://i.pinimg.com/736x/ce/31/42/ce3142d7a968fff3aecd0100572a5e8b.jpg",
+    delay: 0.7,
   },
   {
     id: 10,
@@ -803,5 +819,6 @@ export const customer_reviews = [
       "🌟 Never disappoints. Flavorful meals, fresh and beautifully served. The chef consistently delivers high-quality dishes, and the staff ensures every guest has a memorable dining experience. The dessert selection is divine, and the overall ambiance is perfect for family dinners or romantic evenings. 💯🍷",
     image:
       "https://i.pinimg.com/736x/79/63/a5/7963a5246188d408b8f28961a0cf2b90.jpg",
+    delay: 0.8,
   },
 ];

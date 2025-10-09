@@ -1,5 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { CartContext } from "@/contexts/CartContext";
+import { SlideRigth } from "@/hooks/Animation";
+import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +30,12 @@ const CartPage = () => {
   return (
     <section className="mt-10">
       {/* Cart Table */}
-      <div className="overflow-x-auto">
+      <motion.div
+        variants={SlideRigth(0.5)}
+        initial="hidden"
+        whileInView="visible"
+        className="overflow-x-auto"
+      >
         <table className="w-full min-w-[600px] border border-gray-200 text-left">
           <thead className="bg-gray-100">
             <tr className="text-gray-700">
@@ -80,12 +87,17 @@ const CartPage = () => {
             })}
           </tbody>
         </table>
-      </div>
+      </motion.div>
 
       {/* Checkout & Promo */}
       <div className="flex flex-col lg:flex-row justify-between gap-6 mt-10">
         {/* Cart Summary */}
-        <div className="w-full lg:w-1/2 p-6 rounded-lg space-y-4">
+        <motion.div
+          variants={SlideRigth(0.6)}
+          initial="hidden"
+          whileInView="visible"
+          className="w-full lg:w-1/2 p-6 rounded-lg space-y-4"
+        >
           <h3 className="text-xl font-semibold pb-2">Cart Total</h3>
           <div className="space-y-2">
             <div className="flex justify-between text-gray-600 border-b pb-1">
@@ -109,10 +121,15 @@ const CartPage = () => {
           >
             Proceed to Checkout
           </Button>
-        </div>
+        </motion.div>
 
         {/* Promo Code Section */}
-        <div className="w-full lg:w-1/2 p-6 rounded-lg space-y-3">
+        <motion.div
+          variants={SlideRigth(0.8)}
+          initial="hidden"
+          whileInView="visible"
+          className="w-full lg:w-1/2 p-6 rounded-lg space-y-3"
+        >
           <p className="text-gray-600">
             If you have a promo code, enter it here:
           </p>
@@ -120,7 +137,7 @@ const CartPage = () => {
             <Input type="text" placeholder="Enter Promo Code" />
             <Button>Apply</Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

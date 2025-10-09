@@ -1,4 +1,6 @@
 import { customer_reviews } from "@/assets/assets";
+import { SlideRigth } from "@/hooks/Animation";
+import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 
 function CustomerReview() {
@@ -12,8 +14,11 @@ function CustomerReview() {
       {/* ✅ reviews grid */}
       <div className="w-full columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4 mt-10">
         {customer_reviews.slice(0, 10).map((review, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={SlideRigth(review.delay)}
+            initial="hidden"
+            whileInView="visible"
             className="border-gray-200 shadow-xs p-6 rounded-xl break-inside-avoid border"
           >
             <div className="flex items-center mb-4">
@@ -38,7 +43,7 @@ function CustomerReview() {
             <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
               {review.review}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

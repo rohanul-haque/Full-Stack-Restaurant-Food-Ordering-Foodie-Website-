@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
+
 import { about_data, assets } from "@/assets/assets";
+import { SlideUp } from "@/hooks/Animation";
 
 const About = () => {
   return (
@@ -6,7 +9,10 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Image */}
         <div className="flex justify-center">
-          <img
+          <motion.img
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ stiffness: 100, delay: 0.1 }}
             src={assets.about_image}
             alt="About us"
             className="w-full h-[430px] rounded-2xl object-cover"
@@ -15,13 +21,21 @@ const About = () => {
 
         {/* Right Content */}
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <motion.h1
+            variants={SlideUp(0.1)}
+            initial="hidden"
+            whileInView="visible"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          >
             Why People <span className="text-orange-600">Choose Us?</span>
-          </h1>
+          </motion.h1>
 
           <div className="space-y-6">
             {about_data.map((about, index) => (
-              <div
+              <motion.div
+                variants={SlideUp(about.delay)}
+                initial="hidden"
+                whileInView="visible"
                 key={index}
                 className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl shadow hover:shadow-md transition-shadow"
               >
@@ -36,7 +50,7 @@ const About = () => {
                     {about.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

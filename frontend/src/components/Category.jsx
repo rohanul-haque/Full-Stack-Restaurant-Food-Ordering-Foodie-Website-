@@ -1,11 +1,17 @@
+import { motion } from "framer-motion";
+
 import { service_data } from "@/assets/assets";
+import { SlideLeft } from "@/hooks/Animation";
 
 const Category = () => {
   return (
     <section className="mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {service_data.map((service, index) => (
-          <div
+          <motion.div
+            variants={SlideLeft(service.deley)}
+            initial="hidden"
+            whileInView={"visible"}
             key={index}
             className="border border-gray-200 shadow rounded-2xl text-center p-6 hover:shadow-md transition-shadow bg-white"
           >
@@ -21,7 +27,7 @@ const Category = () => {
             <p className="text-gray-600 text-sm leading-relaxed">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

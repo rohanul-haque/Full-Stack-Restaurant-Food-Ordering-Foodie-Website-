@@ -2,6 +2,8 @@ import FoodCard from "@/components/FoodCard";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CartContext } from "@/contexts/CartContext";
 import { WishListContext } from "@/contexts/WishListContext";
+import { SlideRigth } from "@/hooks/Animation";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 
 const WishListPage = () => {
@@ -41,11 +43,16 @@ const WishListPage = () => {
 
   // Render wishlist foods
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+    <motion.div
+      variants={SlideRigth(0.5)}
+      initial="hidden"
+      whileInView="visible"
+      className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"
+    >
       {wishlistFoods.map((food) => (
         <FoodCard key={food._id} food={food} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
